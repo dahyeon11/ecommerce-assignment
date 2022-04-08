@@ -18,10 +18,11 @@ export function setupSwagger(app: INestApplication): void {
   )
     .setVersion('1.1.0')
     .setTitle('API Docs')
-    .setDescription('Api 문서입니다.')
+    .setDescription('식스샵 백엔드 개발자 과제 API 문서입니다.')
     .setVersion('1.0.0')
-    .addServer('https://test.dahyeon.us', '테스트 서버')
-    .addServer('https://api.dahyeon.us', '상용 서버')
+    .addServer('https://api2.dahyeon.us', '서버2(vultr)')
+    .addServer('https://test.dahyeon.us', '테스트(로컬) 서버')
+    .addServer('https://api1.dahyeon.us', '서버1(aws)')
     .build();
 
 
