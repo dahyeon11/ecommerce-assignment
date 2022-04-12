@@ -17,8 +17,8 @@ export class CustomersController {
 		summary: '고객 회원 가입',
 		description: '회원 가입요청을 보냅니다.',
 	})
-  create(@Body() createCustomerDto: CreateCustomerDto) {
-    return this.customersService.create(createCustomerDto);
+  signUp(@Body() createCustomerDto: CreateCustomerDto) {
+    return this.customersService.signUp(createCustomerDto);
   }
 
   @Get(':id')
@@ -141,8 +141,8 @@ export class CustomersController {
 		summary: '고객 정보 및 엑세스 토큰 갱신',
 		description: '발급된 리프레시 토큰을 이용해 엑세스 토큰을 갱신하며 고객정보를 최신화 합니다.',
 	})
-  findAll() {
-    return this.customersService.findAll();
+  getAccessToken() {
+    return this.customersService.getAccessToken();
   }
 
 
